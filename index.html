@@ -16,6 +16,7 @@
    
   </head>
   <body>
+    
     <!--Шапка сайту-->
     <header class="header">
       <div class="container header-container"> 
@@ -58,7 +59,7 @@
           <h1 class="hero-title">
            Ефективні рішення для вашого бізнесу
           </h1>
-          <button type=button class="hero-btn">Замовити послугу</button>
+          <button type=button class="hero-btn" data-modal-open>Замовити послугу</button>
         </div>
         
         </section>
@@ -133,15 +134,24 @@
         <h2 class="what-we-do-title title">Чим ми займаємося</h2>
         <ul class="what-we-do-list list">
           <li class="what-we-do-item">
+            <div class="what-we-do-wrap">
             <img class="what-we-do-imagine" src="./images/img-min.jpg" alt="Laptop" width="370" height="294"/>
+            <p class="what-we-do-text">Десктопні додатки</p>
+            </div>
           </li>
 
           <li class="what-we-do-item">
+            <div class="what-we-do-wrap">
             <img class="what-we-do-imagine" src="./images/img1-min.jpg" alt="Tablet" width="370" height="294"/>
+            <p class="what-we-do-text">Мобільні додатки</p>
+            </div>
           </li>
 
           <li class="what-we-do-item">
+            <div class="what-we-do-wrap">
             <img class="what-we-do-imagine" src="./images/img2-min.jpg" alt="Cellphone" width="370" height="294"/>
+            <p class="what-we-do-text">Дизайнерські рішення</p>
+            </div>
           </li>
         </ul>
         </div>
@@ -446,5 +456,16 @@
         </div>
   
       </footer>
+      <div class="backdrop is hidden" data-modal>
+      <div class="modal">
+       
+        <button type="button" class="modal-btn" data-modal-close>
+          <svg class="modal-close-icon" width="18px" height="18px">
+            <use href="./images/symbol-defs.svg#icon-close-black"></use>
+          </svg>
+        </button>
+      </div>
+      </div>
+      <script src="./js/modal.js"></script>
   </body>
 </html>
