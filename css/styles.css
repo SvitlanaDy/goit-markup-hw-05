@@ -19,9 +19,10 @@ body {
     --soc-icon-color:#AFB1B8;
     --typical-line-height: 1.14;
     --main-font: 'Roboto', sans-serif;
-    --main-color-transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-    --main-backgrclr-transition:background-color 250ms  cubic-bezier(0.4, 0, 0.2, 1);
-   
+ 
+   --transition-duration: 250ms;
+   --tarnsition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
 }
 .header { 
 border-bottom: 1px Solid
@@ -104,7 +105,7 @@ button {
   color: var(--main-hover-color);
 }
 .header-link{
-  transition: var(--main-color-transition);
+  transition: color var(--transition-duration) var(--tarnsition-timing-function);
 }
 
 .header-navigation{
@@ -191,28 +192,25 @@ justify-content: center;
 
 .header-email:hover,
 .header-email:focus{
- color:  var(--main-hover-color);
  color: var(--btn-cover-color);
 }
 .header-email{
-  transition: var(--main-color-transition);
+  transition: color var(--transition-duration) var(--tarnsition-timing-function);
 }
 
 .header-tel:hover,
 .header-tel:focus{
- color: var(--main-hover-color);
  color: var(--btn-cover-color);
 }
 .header-tel{
-  transition: var(--main-color-transition);
+  transition: color var(--transition-duration) var(--tarnsition-timing-function);
 }
 
 .header-soc-icon:hover {
-  color: var(--main-hover-color);
   color: var(--btn-cover-color);
 }
 .header-soc-icon{
-  transition: var(--main-color-transition);
+ 
 }
 
 .header-link.current{
@@ -316,7 +314,7 @@ justify-content: center;
     background-color: var(--btn-cover-color);
 }
 .hero-btn{
-  transition: var(--main-backgrclr-transition);
+  transition: background-color var(--tarnsition-timing-function) var(--transition-duration);
 }
 
 
@@ -509,7 +507,7 @@ color: var(--Main-text-color);
 }
 
 .team-soc-link{
-  transition: var(--main-color-transition),var(--main-backgrclr-transition);
+  transition: color var(--transition-duration) var(--tarnsition-timing-function),background-color var(--transition-duration) var(--tarnsition-timing-function) ;
 }
 
 /*.team-soc-link:hover .team-soc-icon, 
@@ -573,7 +571,7 @@ margin-bottom: 50px;
 }
 
 .regular-soc-link{
-  transition: var(--main-color-transition),border-color 250ms  cubic-bezier(0.4, 0, 0.2, 1);
+  transition: color var(--transition-duration) var(--tarnsition-timing-function),border-color var(--transition-duration) var(--tarnsition-timing-function);
 }
 
 
@@ -641,8 +639,8 @@ box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.12),
 }
 
 .about-button-examples{
-  transition: var(--main-color-transition),var(--main-backgrclr-transition),
-  box-shadow 250ms  cubic-bezier(0.4, 0, 0.2, 1);
+  transition: color var(--transition-duration) var(--tarnsition-timing-function),background-color var(--transition-duration) var(--tarnsition-timing-function),
+  box-shadow var(--transition-duration)  var(--tarnsition-timing-function);
 }
 
 
@@ -689,9 +687,8 @@ color: var(--Main-text-color);
   
 }
 .examples-link{
-  transition: box-shadow 250ms  cubic-bezier(0.4, 0, 0.2, 1);
+  transition: box-shadow var(--transition-duration)  var(--tarnsition-timing-function);
 }
-
 
 .examples-top-wrap{
   position:relative;
@@ -712,7 +709,7 @@ color: var(--Main-text-color);
   height: 100%;
 
   transform:translateY(100%);
-  transition: transform 250ms  cubic-bezier(0.4, 0, 0.2, 1);
+  transition: transform var(--transition-duration)  var(--tarnsition-timing-function);
   
 }
 
@@ -766,7 +763,7 @@ color: var(--main-footer-adress-color);
   color: var(--main-hover-color);
 }
 .footer-googlemap{
-  transition: var(--main-color-transition);
+  transition: color var(--transition-duration) var(--tarnsition-timing-function);
 }
 
   .footer-email:hover,
@@ -774,14 +771,14 @@ color: var(--main-footer-adress-color);
    color: var(--main-hover-color);
   }
   .footer-email{
-    transition: var(--main-color-transition);
+    transition:  color var(--transition-duration) var(--tarnsition-timing-function);
   }
   .footer-tel:hover,
   .footer-tel:focus{
    color:  var(--main-hover-color);
   }
   .footer-tel{
-    transition: var(--main-color-transition);
+    transition:  color var(--transition-duration) var(--tarnsition-timing-function);
   }
   
   .footer-container{
@@ -828,6 +825,7 @@ color: var(--main-footer-adress-color);
     display: flex;
     align-items: center;
     justify-content: center;
+    transition:  background-color var(--transition-duration) var(--tarnsition-timing-function);
   
   }
   .footer-soc-icon {
@@ -839,9 +837,6 @@ color: var(--main-footer-adress-color);
     background-color :var(--btn-cover-color);
   
   }
-  .footer-soc-link{
-    transition: var(--main-backgrclr-transition);
-  }
   
   .backdrop {
     position: fixed;
@@ -849,7 +844,7 @@ color: var(--main-footer-adress-color);
     width: 100%;
     height: 100%;
     background-color: rgba(47, 48, 58, 0.4);
-    transition:opacity 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    transition:opacity var(--transition-duration) var(--tarnsition-timing-function),
     visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
   }
